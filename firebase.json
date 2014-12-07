@@ -1,0 +1,9 @@
+{
+  "firebase": "radiant-fire-5902",
+  "public": "app/pages",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
