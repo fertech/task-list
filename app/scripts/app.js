@@ -1,4 +1,4 @@
-var taskListApp = angular.module("TaskListApp", ['firebase', 'ui.router', 'ng-route']);
+var taskListApp = angular.module("TaskListApp", ['firebase', 'ui.router', 'ngRoute']);
 
 taskListApp.controller('Homepage.controller', ['$scope', '$firebase', function($scope,$firebase) {
   var fireData = new Firebase("https://radiant-fire-5902.firebaseio.com/");
@@ -16,8 +16,8 @@ taskListApp.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('active', {
       url: "/",
-      templateUrl: "templates/active.html"
-      // controller: "Homepage.controller"
+      templateUrl: "templates/active.html",
+      controller: "Homepage.controller"
     })
     
 });
