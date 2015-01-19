@@ -1,1 +1,17 @@
-<h1>Active lists</h1>
+<div class="list-container">
+	<h3 class="title">Current Tasks</h3>
+	<div class="task-container">
+	 
+		<!--{{task.description}} -->
+	  	<div class="task" ng-repeat="task in tasks">
+		  {{task.description}}
+		</div>
+	  	
+	</div>
+	<form ng-submit="addTask()">
+		<input ng-model="task.description" >
+	  <button type="submit">new task</button>
+	</form>
+</div>
+
+

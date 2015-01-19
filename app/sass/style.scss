@@ -1,0 +1,21 @@
+.list-container {
+  width: 40%;
+  margin: 10px auto;
+
+}
+
+.title {
+  background-color: #939393;
+  padding: 10px;
+  text-align: center;
+  
+}
+.task-container{
+  background-color: #dbdbdb;
+  padding-bottom: 30px;
+  .task {
+    Padding: 20px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #dbdbdb;
+}
+}
