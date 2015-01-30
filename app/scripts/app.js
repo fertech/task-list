@@ -8,12 +8,12 @@ taskListApp.controller('Homepage.controller', ['$scope', '$firebase', function($
 
   $scope.task = {completed: false}; //this is only for creation
   $scope.addTask = function() {
-	// debugger;
 	$scope.tasks.$add($scope.task);
 	$scope.task = {};
 }
   $scope.markCompleted = function(currentTask) {
 	currentTask.completed = true;
+	$scope.tasks.$save(currentTask);
 }
 }])
 
@@ -29,5 +29,10 @@ taskListApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "templates/active.html",
       controller: "Homepage.controller"
     })
-    
+   	$stateProvider
+	    .state('completed', {
+	      url: "/completed",
+	      templateUrl: "templates/completed.html",
+	      controller: "Homepage.controller"
+	    })
 });
