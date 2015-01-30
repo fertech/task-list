@@ -10,6 +10,7 @@
   text-align: center;
   
 }
+
 .task-container{
   background-color: #dbdbdb;
   padding-bottom: 30px;
@@ -17,5 +18,8 @@
     Padding: 20px;
     background-color: #f6f6f6;
     border-bottom: 1px solid #dbdbdb;
+}
+  .task-completed {
+    text-decoration: line-through;
 }
 }

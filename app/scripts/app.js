@@ -4,15 +4,16 @@ taskListApp.controller('Homepage.controller', ['$scope', '$firebase', function($
   var tasksData = new Firebase("https://radiant-fire-5902.firebaseio.com");
   var sync = $firebase(tasksData);
   // download the data into a local object
-  $scope.tasks = sync.$asArray();
+  $scope.tasks = sync.$asArray(); //modify here
 
+  $scope.task = {completed: false}; //this is only for creation
   $scope.addTask = function() {
-	$scope.tasks.$add({description:"add task here"})
-   /*	var newTask = $scope.tasks.child("task");
-	newTask.set({
-		description: "My description"
-	});
-	*/
+	// debugger;
+	$scope.tasks.$add($scope.task);
+	$scope.task = {};
+}
+  $scope.markCompleted = function(currentTask) {
+	currentTask.completed = true;
 }
 }])
 
